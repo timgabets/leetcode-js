@@ -29,4 +29,20 @@ describe("StringToInteger", function() {
   it("should be able to convert '-39' to -39", function() {
     expect(solution.myAtoi('-39')).toEqual(-39);
   });
+
+  it("should treat '--39' as invalid", function() {
+    expect(solution.myAtoi('--39')).toEqual(0);
+  });
+
+  it("should treat '15-39' as invalid", function() {
+    expect(solution.myAtoi('15-39')).toEqual(0);
+  });
+
+  it("should treat '-' as invalid", function() {
+    expect(solution.myAtoi('-')).toEqual(0);
+  });
+
+  it("should trim whitespaces", function() {
+    expect(solution.myAtoi('                   1337')).toEqual(1337);
+  });  
 });
