@@ -1,1 +1,1 @@
-My [leetcode](leetcode.com) JavScript problem solutions
+My [leetcode](leetcode.com) JavaScript problem solutions
