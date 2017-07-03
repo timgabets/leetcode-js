@@ -54,6 +54,18 @@ describe("StringToInteger", function() {
     expect(solution.myAtoi('2147483647')).toEqual(2147483647);
   });
 
+  it("should return INT_MAX on values larger than INT_MAX", function() {
+    expect(solution.myAtoi('2147483648')).toEqual(2147483647);
+  });
+
+  it("should be able to convert INT_MIN", function() {
+    expect(solution.myAtoi('-2147483648')).toEqual(-2147483648);
+  });
+
+  it("should return INT_MAX on values less than INT_MIN", function() {
+    expect(solution.myAtoi('-2147483649')).toEqual(-2147483648);
+  });
+
   it("should be able to trim non-whitespace sequence", function() {
     expect(solution.myAtoi("  -0012a42")).toEqual(-12);
   });
