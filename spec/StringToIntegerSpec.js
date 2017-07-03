@@ -25,4 +25,8 @@ describe("StringToInteger", function() {
   it("should be able to convert '13' to 13", function() {
     expect(solution.myAtoi('13')).toEqual(13);
   });
+
+  it("should be able to convert '-39' to -39", function() {
+    expect(solution.myAtoi('-39')).toEqual(-39);
+  });
 });
