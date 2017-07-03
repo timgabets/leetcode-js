@@ -42,7 +42,19 @@ describe("StringToInteger", function() {
     expect(solution.myAtoi('-')).toEqual(0);
   });
 
+  it("should convert '+91' to 91", function() {
+    expect(solution.myAtoi('+91')).toEqual(91);
+  });
+
+  it("should treat '++44' as invalid", function() {
+    expect(solution.myAtoi('++44')).toEqual(0);
+  });
+
   it("should trim whitespaces", function() {
-    expect(solution.myAtoi('                   1337')).toEqual(1337);
-  });  
+    expect(solution.myAtoi('                   1337       ')).toEqual(1337);
+  });
+
+  it("should be able to convert INT_MAX", function() {
+    expect(solution.myAtoi('2147483647')).toEqual(2147483647);
+  });
 });
