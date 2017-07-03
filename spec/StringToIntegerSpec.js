@@ -34,10 +34,6 @@ describe("StringToInteger", function() {
     expect(solution.myAtoi('--39')).toEqual(0);
   });
 
-  it("should treat '15-39' as invalid", function() {
-    expect(solution.myAtoi('15-39')).toEqual(0);
-  });
-
   it("should treat '-' as invalid", function() {
     expect(solution.myAtoi('-')).toEqual(0);
   });
@@ -56,5 +52,9 @@ describe("StringToInteger", function() {
 
   it("should be able to convert INT_MAX", function() {
     expect(solution.myAtoi('2147483647')).toEqual(2147483647);
+  });
+
+  it("should be able to trim non-whitespace sequence", function() {
+    expect(solution.myAtoi("  -0012a42")).toEqual(-12);
   });
 });
