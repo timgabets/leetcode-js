@@ -7,6 +7,6 @@ describe("ZigZagConversion", function() {
   });
 
   it("should be able to convert string and 1 row", function() {
-    expect(solution.convert('', 1)).toEqual('');
+    expect(solution.convert('PAYPALISHIRING', 3)).toEqual('');
   });
 });
