@@ -5,7 +5,7 @@ describe("StringToInteger", function() {
   beforeEach(function() {
     solution = new StringToInteger();
   });
-/*
+
   it("should return 0 on empty string", function() {
     expect(solution.myAtoi('')).toEqual(0);
   });
@@ -17,7 +17,7 @@ describe("StringToInteger", function() {
   it("should be able to convert '0' to 0", function() {
     expect(solution.myAtoi('0')).toEqual(0);
   });
-*/
+
   it("should be able to convert '1' to 1", function() {
     expect(solution.myAtoi('1')).toEqual(1);
   });
