@@ -17,4 +17,8 @@ describe("ReverseInteger", function() {
   it("should handle leading zeroes", function() {
     expect(solution.reverse(120)).toEqual(21);
   });
+
+  it("should return zero if reversed result is overflown", function() {
+    expect(solution.reverse(1534236469)).toEqual(0);
+  });  
 });
